@@ -1,0 +1,27 @@
+@import "../../mixins";
+
+.error404 {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+
+    @include atMedium {
+      margin-right: auto;
+      margin-left: auto;
+      width: 750px;
+    }
+
+    @include atLarge {
+      width: 1120px;
+    }
+  }
+
+  &__link {
+    color: $primary !important;
+    font-weight: bold;
+    text-decoration: underline !important;
+  }
+}

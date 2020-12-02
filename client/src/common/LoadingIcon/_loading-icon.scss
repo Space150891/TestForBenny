@@ -1,0 +1,43 @@
+@import "../../mixins";
+
+.loading-icon {
+  margin: 0 auto;
+  text-align: center;
+
+  & div,
+  &::before,
+  &::after {
+    margin: 35px 5px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $primary;
+    opacity: 0;
+  }
+
+  &::before {
+    animation: loading-icon 1s ease-in-out infinite;
+    content: " ";
+  }
+
+  & div {
+    animation: loading-icon 1s ease-in-out 0.33s infinite;
+  }
+
+  &::after {
+    animation: loading-icon 1s ease-in-out 0.66s infinite;
+    content: " ";
+  }
+}
+
+@keyframes loading-icon {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}

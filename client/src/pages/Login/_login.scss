@@ -1,0 +1,52 @@
+@import "../../mixins";
+
+.auth-modal {
+  background-color: white;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 56px 16px;
+  margin: 0 auto;
+  @include flexCenter;
+  flex-direction: column;
+
+  @include atMedium {
+    width: 610px;
+    min-height: unset;
+    padding: 56px 48px;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    color: $secondary;
+    margin-bottom: 24px;
+  }
+
+  .auth-modal__icon {
+    margin-bottom: 32px;
+    height: 90px;
+    width: 90px;
+  }
+
+  &__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include atMedium {
+      flex-direction: row;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $secondary;
+    cursor: pointer;
+    margin: 8px 0;
+
+    &.mb32 {
+      margin-bottom: 32px;
+    }
+  }
+}

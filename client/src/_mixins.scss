@@ -1,0 +1,21 @@
+$primary: #fe5b5b;
+$primarylight: #ffdbdb;
+$secondary: #3f586f;
+
+@mixin atMedium {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin atLarge {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

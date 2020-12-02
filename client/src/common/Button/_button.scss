@@ -1,0 +1,28 @@
+@import "../../mixins";
+
+.button {
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid $primary;
+  font-size: 1.6rem;
+  padding: 14px 24px;
+
+  @include atMedium {
+    padding: 18.5px 32px;
+  }
+
+  &--primary {
+    background-color: $primary;
+    color: white;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $primary;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+}
